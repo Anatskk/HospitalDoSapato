@@ -50,6 +50,13 @@
 .logo img {
     width: 250px;
     height: 100px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+
+.logo img:hover{
+    transform: scale(1.1);
 }
 
 .menu-icon {
@@ -75,6 +82,8 @@
     align-items: center;
     gap: 5px;
     padding: 0px 30px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .trabalhos img {
@@ -109,7 +118,8 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
+    z-index: 2; 
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -121,6 +131,10 @@
 .overlay.show {
     opacity: 1;
     pointer-events: all;
+}
+
+.menu-ativo .overlay {
+    display: block;
 }
 
 .menu-content {
@@ -156,7 +170,6 @@
 
 
 /* Slider */
-
 .containerSlider {
     width: 100vw;
     display: flex;
@@ -168,26 +181,56 @@
 
 .slider {
     width: 100%;
-    max-width: 100vw; 
+    max-width: 100vw;
     overflow: hidden;
     position: relative;
+    z-index: 1; /* Mantém abaixo do fundo escuro */
 }
 
 .slides {
     display: flex;
-    width: 300%; 
+    width: 300%; /* Ajusta conforme a quantidade de imagens */
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    width: 100vw; 
+    width: 100vw; /* Cada slide ocupa toda a largura da tela */
     flex-shrink: 0;
 }
 
 .slide img {
-    width: 100%px;
-    height: 700px; 
-    object-fit: cover; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.containerBTN{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.veja-mais {
+    width: 220px;
+    height: 60px;
+    display: none; 
+    position: absolute;
+    bottom: 100px;
+    transition: transform 0.3s ease;
+    padding: 10px 20px;
+    background-color: #ECD42B;
+    color: #1c1c1c;
+    border: none;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.veja-mais:hover{
+    transform: scale(1.1);
 }
 
 .navigation-bar {
@@ -216,6 +259,32 @@
 .slides input {
     display: none;
 }
+
+@media screen and (max-width: 1150px) {
+    .veja-mais{
+        width: 150px;
+        height: 40px;
+        bottom: 70px;
+        font-size: 18px;
+    }
+}
+
+/* Media Queries (para responsividade) */
+@media screen and (max-width: 768px) {
+    .veja-mais {
+        font-size: 15px;
+        padding: 4px 16px;
+        width: 140px;
+        height: 25px;
+        bottom: 20px;
+        border-radius: 5px;
+    }
+
+    .navigation-bar {
+        display: none;
+    }
+}
+
 
 /* Serviços */
 
@@ -259,27 +328,26 @@
 }
 
 /* Sobre nós */
-
 .containersobrenos {
     width: 100%;
     height: 100%;
-   display: flex;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que os itens quebrem quando necessário */
 }
 
-
-.sobrenos{
-    width: 100%;
+.sobrenos {
+    max-width: 100%;
     height: 500px;
     display: flex;
     flex-direction: row;
     background-image: url(sobrenos.PNG);
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.titulonos{
+.titulonos {
     width: 100%;
     height: auto;
     display: flex;
@@ -289,7 +357,7 @@
     padding: 30px 0px;
 }
 
-.containerTextos{
+.containerTextos {
     width: 100%;
     height: 100%;
     display: flex;
@@ -298,43 +366,78 @@
     justify-content: center;
 }
 
-.titulonos p{
+.titulonos p {
     color: #fff;
-   font-size: 50px; 
-   font-weight: 600;
+    font-size: 50px;
+    font-weight: 600;
 }
 
-.linhaAmarela2{
-    width: 260px;
+.linhaAmarela2 {
+    width: 255px;
     height: 5px;
     background-color: #ECD42B;
     margin: 5px 0px 0px 0px;
 }
 
-.imgSapatos{
+.imgSapatos {
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
-.imgSapatos img{
-    width: 350px;
-    height: 350px;
+.imgSapatos img {
+    width: 650px;
+    height: 400px;
+    object-fit: cover;
 }
 
-.texto{
+.texto {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0px 80px;
+    padding: 0px 40px;
 }
 
-.texto p{
+.texto p {
     color: #fff;
-    font-size: 30px; 
+    font-size: 30px;
+}
+
+/* Media Query para telas com largura menor que 1220px */
+@media screen and (max-width: 1220px) {
+    .sobrenos {
+        flex-direction: column;
+        height: auto; /* A altura vai se ajustar ao conteúdo */
+        justify-content: center;
+    }
+
+    .imgSapatos {
+        width: 100%; /* A imagem vai ocupar 100% da largura disponível */
+        justify-content: center; /* Alinha a imagem no centro */
+        margin-top: 20px;
+    }
+
+    .imgSapatos img {
+        width: 100%;
+        height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    }
+
+    .texto {
+        width: 100%;
+        padding: 20px; /* Ajuste o padding para telas menores */
+    }
+
+    .titulonos p {
+        font-size: 40px; /* Ajuste o tamanho da fonte do título para telas menores */
+    }
+
+    .texto p {
+        font-size: 20px; /* Ajuste o tamanho do texto para telas menores */
+    }
 }
