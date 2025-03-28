@@ -185,8 +185,8 @@
 }
 
 .slide img {
-    width: 100%;
-    height: auto; 
+    width: 100%px;
+    height: 700px; 
     object-fit: cover; 
 }
 
@@ -213,7 +213,128 @@
     transition: 0.4s;
 }
 
-/* Esconde os radio buttons */
 .slides input {
     display: none;
+}
+
+/* Serviços */
+
+.containerServicos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerTenis{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloTenis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.tituloTenis p{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.linhaAmarela{
+    width: 350px;
+    height: 5px;
+    background-color: #ECD42B;
+    margin: 5px 0px 0px 0px;
+}
+
+/* Sobre nós */
+
+.containersobrenos {
+    width: 100%;
+    height: 100%;
+   display: flex;
+   flex-direction: row;
+}
+
+
+.sobrenos{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    background-image: url(sobrenos.PNG);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.titulonos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.containerTextos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulonos p{
+    color: #fff;
+   font-size: 50px; 
+   font-weight: 600;
+}
+
+.linhaAmarela2{
+    width: 260px;
+    height: 5px;
+    background-color: #ECD42B;
+    margin: 5px 0px 0px 0px;
+}
+
+.imgSapatos{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgSapatos img{
+    width: 350px;
+    height: 350px;
+}
+
+.texto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 80px;
+}
+
+.texto p{
+    color: #fff;
+    font-size: 30px; 
 }
