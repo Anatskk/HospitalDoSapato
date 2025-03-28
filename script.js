@@ -21,24 +21,20 @@ document.querySelectorAll('*').forEach(el => {
     }
 });
 
-// Verifica se o primeiro radio button está marcado
 const radio1 = document.getElementById('radio1');
 const vejaMaisBtn = document.querySelector('.veja-mais');
 
-// Função que mostra o botão "VEJA MAIS" quando a primeira imagem está visível
 function verificarSlider() {
     if (radio1.checked) {
-        vejaMaisBtn.style.display = 'block'; // Mostra o botão
+        vejaMaisBtn.style.display = 'block';
     } else {
-        vejaMaisBtn.style.display = 'none'; // Esconde o botão
+        vejaMaisBtn.style.display = 'none'; 
     }
 }
 
-// Adiciona um evento para verificar a mudança no slider
 document.querySelectorAll('.manual-btn').forEach((btn) => {
     btn.addEventListener('click', verificarSlider);
 });
 
-// Verifica o estado inicial
 verificarSlider();
 
