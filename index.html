@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Hospital do Sapato</title>
+</head>
+<body>
+
+    <div class="containeremail">
+        <div class="email">
+            <img src="image 15.png" alt="">
+            <div class="oEmail">
+            <p>seuemail@gmail.com</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="containerheader">
+        <div class="containerEsquerda">
+            <div class="logo">
+                <img src="image 1.png" alt="Logo">
+            </div>
+        </div>
+    
+        <!-- Ícone do menu hambúrguer -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    
+        <div class="containerDireita">
+            <div class="funcoes">
+                <div class="trabalhos">
+                    <img src="img/image 13.png" alt="Trabalhos">
+                    <p>Trabalhos</p>
+                </div>
+                <div class="containerWhatssap">
+                    <div class="whatssap">
+                        <img src="img/image 25.png" alt="WhatsApp">
+                        <p>19 98836-0008</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Menu com fundo preto -->
+        <div class="overlay" id="overlay" onclick="toggleMenu()">
+            <div class="menu-content">
+                <div class="trabalhos">
+                    <img src="image 13.png" alt="Trabalhos">
+                    <p>Trabalhos</p>
+                </div>
+                <div class="containerWhatssap">
+                    <div class="whatssap">
+                        <img src="image 25.png" alt="WhatsApp">
+                        <p>19 98836-0008</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="containerSlider">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" checked />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+
+                <div class="slide first">
+                    <img src="banner1.png" alt="" />
+                </div>
+
+                <div class="slide">
+                    <img src="banner1.png" alt="" />
+                </div>
+
+                <div class="slide">
+                    <img src="banner1.png" alt="" />
+                </div>
+            </div>
+
+            <div class="navigation-bar">
+                <label class="manual-btn" for="radio1"></label>
+                <label class="manual-btn" for="radio2"></label>
+                <label class="manual-btn" for="radio3"></label>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* Email no inicio da página */
+.containeremail{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: #1c1c1c;
+    padding: 5px;
+}
+
+.email{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start; 
+    padding: 0px 20px;
+    gap: 10px;
+}
+
+.email img{
+    width: 30px;
+    height: 30px;
+}
+
+.oEmail p{
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Cabeçalho */
+
+.containerheader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.containerEsquerda {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+    height: 100px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.containerDireita {
+    display: flex;
+    align-items: center;
+}
+
+.funcoes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.trabalhos, .containerWhatssap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 30px;
+}
+
+.trabalhos img {
+    width: 50px;
+    height: 50px;
+}
+
+.whatssap {
+    display: flex;
+    align-items: center;
+    background-color: #25D366;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.whatssap img {
+    width: 30px;
+    height: 30px;
+}
+
+.trabalhos p, .whatssap p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1c1c1c;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.trabalhos:hover, .containerWhatssap:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .containerDireita {
+        display: none;
+    }
+
+    .overlay {
+        display: flex;
+    }
+
+    .trabalhos p, .whatssap p {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+    }
+}
+
+
+/* Slider */
+
+.containerSlider {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #1c1c1c;
+}
+
+.slider {
+    width: 100%;
+    max-width: 100vw; 
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100vw; 
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+}
+
+.navigation-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.manual-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.4s;
+}
+
+/* Esconde os radio buttons */
+.slides input {
+    display: none;
+}
