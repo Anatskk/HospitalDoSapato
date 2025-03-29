@@ -177,6 +177,8 @@
     justify-content: center;
     overflow: hidden;
     background-color: #1c1c1c;
+    box-shadow: 0px 4px 15px rgba(0.3, 0.3, 0.3, 0.3); 
+
 }
 
 .slider {
@@ -333,7 +335,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Permite que os itens quebrem quando necessário */
+    flex-wrap: wrap; 
 }
 
 .sobrenos {
@@ -423,8 +425,8 @@
     }
 
     .imgSapatos img {
-        width: 100%;
-        height: auto; 
+        width: 650px;
+        height: 400px;
     }
 
     .texto {
@@ -441,6 +443,13 @@
     }
 }
 
+@media screen and (max-width: 1220px) {
+    .imgSapatos img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* Endereço da loja */
 
 .containerNossaLoja{
@@ -451,6 +460,7 @@
     align-items: center;
     justify-content: center;
     padding: 30px 0px;
+    
 }
 
 .linhaAmarela3{
@@ -480,12 +490,13 @@
     width: 420px;
     height: 350px;
     border-radius: 20px 0px 0px 20px;
+    box-shadow: 0px 4px 15px rgba(0.8, 0.8, 0.8, 0.8); 
+
 }
 
 .containerEndereco{
     width: 100%;
     height: 100%;
-
 }
 
 .endereco{
@@ -496,8 +507,10 @@
   align-items: center;
   justify-content: space-between;
   background-color: #ECD42B;
+  box-shadow: 0px 4px 15px rgba(0.8, 0.8, 0.8, 0.8); 
   border-radius: 0px 20px 20px 0px; 
 }
+
 
 .bairro{
     width: 100%;
@@ -555,3 +568,272 @@
         border-radius: 20px 20px 0px 0px;
     }
 }
+
+/* Conheça também */
+
+.containerConhecaTamebem{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.conhecaTamebem{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.tituloConheca{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloConheca p{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.linhaAmarela4{
+    width: 270px;
+    height: 5px;
+    background-color: #ECD42B;
+    margin: 5px 0px 0px 0px;
+}
+
+.containerBotaoClinica{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.botaoClinica{
+    width: 400px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.botaoClinica:hover{
+    transform: scale(1.1);
+}
+
+.containerImgMala{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0px 0px 0px 20px;
+}
+
+.containerImgMala img{
+    width: 55px;
+    height: 45px;
+}
+
+.containerMala{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.containerMala p{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.containerVetor{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 20px 0px 0px;
+}
+
+.containerVetor img{
+    width: 41px;
+    height: 43px;
+}
+
+@media screen and (max-width: 700px) {
+    .conhecaTamebem{
+        display: grid;
+    }
+
+    .botaoClinica{
+        width: 350px;
+        height: 65px;
+        border-radius: 10px;
+    }
+
+    .containerMala p{
+        font-size: 23px;
+    }
+
+}
+
+/* FOOTER */
+
+.containerFooter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLogo{
+    background-color: #7C7E80;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+.logo2 img{
+    width: 140px;
+    height: 70px;
+}
+
+.containerContatos{
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 0px 0px;
+}
+
+.tituloContatos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 20px 0px;
+}
+
+.tituloContatos p{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.osContatos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px ;
+}
+
+.emailCompleto, .whatssapCompleto{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.emailCompleto{
+    gap: 7px;
+}
+
+.whatssapCompleto{
+    gap: 3px;
+}
+
+.emailCompleto p, .whatssapCompleto p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.emailCompleto img, .whatssapCompleto img{
+    width: 25px;
+    height: 25px;
+}
+
+.icones{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 0px 0px 30px 0px;
+}
+
+.icones img{
+    width: 45px;
+    height: 45px;
+}
+
+.img1 img, .img2 img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.img1:hover , .img2:hover{
+    transform: scale(1.1);
+}
+
+.containerDireitos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECD42B;
+    padding: 10px;
+}
+
+.direitos p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
