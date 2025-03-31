@@ -1,172 +1,3 @@
-/* Email no inicio da página */
-.containeremail{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    background-color: #1c1c1c;
-    padding: 5px;
-}
-
-.email{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start; 
-    padding: 0px 20px;
-    gap: 10px;
-}
-
-.email img{
-    width: 30px;
-    height: 30px;
-}
-
-.oEmail p{
-    color: #fff;
-    font-size: 18px;
-}
-
-/* Cabeçalho */
-
-.containerheader {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-.containerEsquerda {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 250px;
-    height: 100px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-
-}
-
-.logo img:hover{
-    transform: scale(1.1);
-}
-
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.containerDireita {
-    display: flex;
-    align-items: center;
-}
-
-.funcoes {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.trabalhos, .containerWhatssap {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 0px 30px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.trabalhos img {
-    width: 50px;
-    height: 50px;
-}
-
-.whatssap {
-    display: flex;
-    align-items: center;
-    background-color: #25D366;
-    padding: 10px;
-    border-radius: 10px;
-    gap: 5px;
-}
-
-.whatssap img {
-    width: 30px;
-    height: 30px;
-}
-
-.trabalhos p, .whatssap p {
-    font-size: 18px;
-    font-weight: 500;
-    color: #1c1c1c;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2; 
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.overlay.show {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.menu-ativo .overlay {
-    display: block;
-}
-
-.menu-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.trabalhos:hover, .containerWhatssap:hover {
-    transform: scale(1.1);
-}
-
-@media screen and (max-width: 900px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .containerDireita {
-        display: none;
-    }
-
-    .overlay {
-        display: flex;
-    }
-
-    .trabalhos p, .whatssap p {
-        font-size: 18px;
-        font-weight: 500;
-        color: #fff;
-    }
-}
 
 
 /* Slider */
@@ -186,17 +17,17 @@
     max-width: 100vw;
     overflow: hidden;
     position: relative;
-    z-index: 1; /* Mantém abaixo do fundo escuro */
+    z-index: 1; 
 }
 
 .slides {
     display: flex;
-    width: 300%; /* Ajusta conforme a quantidade de imagens */
+    width: 300%; 
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    width: 100vw; /* Cada slide ocupa toda a largura da tela */
+    width: 100vw; 
     flex-shrink: 0;
 }
 
@@ -325,7 +156,7 @@
 }
 
 .linhaAmarela{
-    width: 450px;
+    width: 350px;
     height: 5px;
     background-color: #ECD42B;
     margin: 5px 0px 0px 0px;
@@ -461,7 +292,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px 0px;
+    padding: 60px 0px 0px 0px;
     
 }
 
@@ -517,7 +348,8 @@
 .bairro{
     width: 100%;
     display: flex;
-    align-items: start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 20px;
 }
@@ -543,13 +375,15 @@
 .telefone{
     width: 100%;
     display: flex;
-    align-items: end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
     padding: 20px;
+    gap: 10px;
 }
 
 .telefone p{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
 }
 
@@ -589,7 +423,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 60px 30px;
+    padding: 0px 30px 60px 30px;
     gap: 30px;
 }
 
@@ -639,6 +473,7 @@
 
 .botaoClinica:hover{
     transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0.8, 0.8, 0.8, 0.8); 
 }
 
 .containerImgMala{
@@ -700,145 +535,6 @@
 
 }
 
-/* FOOTER */
-
-.containerFooter{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.containerLogo{
-    background-color: #7C7E80;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-}
-
-.logo2{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 1px;
-}
-
-.logo2 img{
-    width: 140px;
-    height: 70px;
-}
-
-.containerContatos{
-    width: 100%;
-    height: 100%;
-    background-color: #1c1c1c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0px 0px 0px;
-}
-
-.tituloContatos{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 0px 20px 0px;
-}
-
-.tituloContatos p{
-    font-size: 30px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.osContatos{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px ;
-}
-
-.emailCompleto, .whatssapCompleto{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.emailCompleto{
-    gap: 7px;
-}
-
-.whatssapCompleto{
-    gap: 3px;
-}
-
-.emailCompleto p, .whatssapCompleto p{
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.emailCompleto img, .whatssapCompleto img{
-    width: 25px;
-    height: 25px;
-}
-
-.icones{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    padding: 0px 0px 30px 0px;
-}
-
-.icones img{
-    width: 45px;
-    height: 45px;
-}
-
-.img1 img, .img2 img{
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.img1:hover , .img2:hover{
-    transform: scale(1.1);
-}
-
-.containerDireitos{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ECD42B;
-    padding: 10px;
-}
-
-.direitos p{
-    font-size: 18px;
-    font-weight: 500;
-}
-
 /* Sliders */
 
 .slider2-container, .slider3-container {
@@ -853,6 +549,7 @@
     width: 750px;
     overflow: hidden;
     position: relative;
+    width: calc(240px * var(--visible-cards)); 
 }
 
 .slider2 , .slider4{
@@ -916,7 +613,7 @@
     height: 41px;
 }
 
-.slider3 , .slider {
+.slider3  {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -953,9 +650,45 @@
     }
 }
 
-.todosSliders{
+.todosSliders , .todosSliders2{
     width: 100%;
     height: 100%;
     padding: 60px 0px 60px 0px;
 }
 
+.containerBTNVermais{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 0px 0px;
+}
+
+.btnVerMais button{
+    width: 210px;
+    height: 40px;
+    color: #1c1c1c;
+    background-color: #ECD42B;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 05px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btnVerMais button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0.3, 0.3, 0.3, 0.3); 
+}
+
+.btnVerMais img{
+    width: 29px;
+    height: 34px;
+}

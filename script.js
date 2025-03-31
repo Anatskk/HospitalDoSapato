@@ -93,3 +93,22 @@ setInterval(function() {
     nextSlide(1);  
     nextSlide(2);  
 }, 5000);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".hidden");
+
+    function checkScroll() {
+        const windowHeight = window.innerHeight;
+        elements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 200) {
+                el.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Para carregar os elementos visíveis imediatamente
+});
+
+document.querySelector(".iconWhatssap img").style.animation = "pulse 1.5s infinite ease-in-out";

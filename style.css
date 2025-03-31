@@ -7,14 +7,395 @@
     box-sizing: border-box;
 }
 
-
 html, body {
     overflow-x: hidden; 
     width: 100%;
 }
 
-
-
 a {
     text-decoration: none;
+}
+
+/* Email no inicio da página */
+.containeremail{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: #1c1c1c;
+    padding: 5px;
+}
+
+.email{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start; 
+    padding: 0px 20px;
+    gap: 10px;
+}
+
+.email img{
+    width: 30px;
+    height: 30px;
+}
+
+.oEmail p{
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Cabeçalho */
+
+.containerheader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.containerEsquerda {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+    height: 100px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.containerDireita {
+    display: flex;
+    align-items: center;
+}
+
+.funcoes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.trabalhos, .containerWhatssap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 30px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.trabalhos img {
+    width: 50px;
+    height: 50px;
+}
+
+.whatssap {
+    display: flex;
+    align-items: center;
+    background-color: #25D366;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.whatssap img {
+    width: 30px;
+    height: 30px;
+}
+
+.trabalhos p, .whatssap p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1c1c1c;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2; 
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu-ativo .overlay {
+    display: block;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.trabalhos:hover {
+    transform: scale(1.1);
+}
+
+.containerWhatssap:hover{
+    transform: scale(1.1);
+}
+
+
+.whatssap:hover{
+    background-color: #ECD42B;
+    box-shadow: 0px 4px 15px rgba(0.3, 0.3, 0.3, 0.3); 
+
+}
+
+@media screen and (max-width: 900px) {
+    .menu-icon {
+        display: block;
+        z-index: 1000;    
+    }
+
+    .containerDireita {
+        display: none;
+    }
+
+    .overlay {
+        display: flex;
+    }
+
+    .trabalhos p, .whatssap p {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+    }
+}
+
+/* FOOTER */
+
+.containerFooter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLogo{
+    background-color: #7C7E80;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+.logo2 img{
+    width: 140px;
+    height: 70px;
+}
+
+.containerContatos{
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 0px 0px;
+}
+
+.tituloContatos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 20px 0px;
+}
+
+.tituloContatos p{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.osContatos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px ;
+}
+
+.emailCompleto, .whatssapCompleto{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.emailCompleto{
+    gap: 7px;
+}
+
+.whatssapCompleto{
+    gap: 3px;
+}
+
+.emailCompleto p, .whatssapCompleto p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.emailCompleto img, .whatssapCompleto img{
+    width: 25px;
+    height: 25px;
+}
+
+.icones{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 0px 0px 30px 0px;
+}
+
+.icones img{
+    width: 45px;
+    height: 45px;
+}
+
+.img1 img, .img2 img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.img1:hover , .img2:hover{
+    transform: scale(1.1);
+}
+
+.containerDireitos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECD42B;
+    padding: 10px;
+}
+
+.direitos p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Animação */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Classe inicial */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Classe que ativa a animação */
+.show {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.containerIconWhatssap {
+    position: fixed;  
+    bottom: 20px;     
+    left: 20px;      
+    z-index: 1000;    
+    width: auto;
+    height: auto;
+}
+
+.iconWhatssap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconWhatssap img {
+    width: 65px;     
+    height: 65px;
+    cursor: pointer;
+    border-radius: 45px;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
